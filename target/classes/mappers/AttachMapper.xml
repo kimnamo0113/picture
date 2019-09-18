@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yi.mapper.AttachMapper">
+
+
+	<insert id="insertAttach" parameterType="Attach">
+		INSERT INTO picture.attach
+		(userid, fullName,orgName, regdate)
+		VALUES(#{userid}, #{fullName},#{orgName}, CURRENT_TIMESTAMP);
+	</insert>
+	
+	<select id="listCreteria" resultType="Attach" parameterType="Creiteria">
+		select * from Attach
+		order by bno desc
+		limit #{pageStart}, #{perPageNum}
+	</select>
+	<select id="countPaging" resultType="int">
+		select count(bno) from attach
+	</select>
+	
+	<delete id="delete">
+		delete from attach where bno=#{bno}
+	</delete>
+</mapper>
