@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.yi.domain.Attach;
 import com.yi.domain.Creiteria;
-import com.yi.domain.SearchCriteria;
 
 public interface AttachDao {
 	public void insertAttach(Attach attach);
