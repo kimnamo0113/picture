@@ -220,8 +220,8 @@
 			
 			var $img = $("<img>").attr("src","displayFile?filename="+pre+post).attr("data-src",pre+post).attr("data-bno",imgbno);
 			var $x = $("<span>").text("X");
-			var $btn = $("<button>").attr("id","delete").text("삭제");
-			$("#imgToggle").html($img).append($x).append($btn);
+			/* var $btn = $("<button>").attr("id","delete").text("삭제"); */
+			$("#imgToggle").html($img).append($x)/* .append($btn) */;
 		})
 		
 		$(document).on("click","#delete",function(){
